@@ -1,0 +1,939 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A412D02C48B89F00FA5F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */; };
+		04A412D22C48B89F00FA5F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */; };
+		04A412D42C48B89F00FA5F13 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D32C48B89F00FA5F13 /* RegistrationViewController.swift */; };
+		04A412D92C48B8A100FA5F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A412D82C48B8A100FA5F13 /* Assets.xcassets */; };
+		04A412DC2C48B8A100FA5F13 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04A412DB2C48B8A100FA5F13 /* Base */; };
+		04A412E72C48B8A100FA5F13 /* FindJellyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412E62C48B8A100FA5F13 /* FindJellyTests.swift */; };
+		04A412F12C48B8A100FA5F13 /* FindJellyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412F02C48B8A100FA5F13 /* FindJellyUITests.swift */; };
+		04A412F32C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */; };
+		04A413072C48EB9C00FA5F13 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A413062C48EB9C00FA5F13 /* R.generated.swift */; };
+		04AFDA0D2C4DE4AE00E50625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */; };
+		04AFDA112C4DEB2000E50625 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA102C4DEB2000E50625 /* AuthorizationViewController.swift */; };
+		04AFDA142C4DEB7C00E50625 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */; };
+		04AFDA172C4DEB9900E50625 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */; };
+		04AFDA1A2C4DEBB200E50625 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */; };
+		04AFDA1D2C4E2B6E00E50625 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA1C2C4E2B6E00E50625 /* UIImage+Extension.swift */; };
+		04AFDA1F2C4E3E9800E50625 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA1E2C4E3E9800E50625 /* UITextField+Extension.swift */; };
+		04AFDA212C4E42AB00E50625 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA202C4E42AB00E50625 /* UIButton+Extension.swift */; };
+		87BD584741D8CDD2FA80EC12 /* Pods_FindJelly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FAB8F19129B9997E2F94CF /* Pods_FindJelly.framework */; };
+		94E5F44F052B5B5A09F8C149 /* Pods_FindJellyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05556B3DDF0BBAC3AE7C70D /* Pods_FindJellyTests.framework */; };
+		A3D0C1DE63B95D56E5F0D547 /* Pods_FindJelly_FindJellyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC87549C4BDCCE1BB0695AB /* Pods_FindJelly_FindJellyUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04A412E32C48B8A100FA5F13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A412C42C48B89F00FA5F13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A412CB2C48B89F00FA5F13;
+			remoteInfo = FindJelly;
+		};
+		04A412ED2C48B8A100FA5F13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A412C42C48B89F00FA5F13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A412CB2C48B89F00FA5F13;
+			remoteInfo = FindJelly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A412CC2C48B89F00FA5F13 /* FindJelly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindJelly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04A412D32C48B89F00FA5F13 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		04A412D82C48B8A100FA5F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04A412DB2C48B8A100FA5F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04A412DD2C48B8A100FA5F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A412E22C48B8A100FA5F13 /* FindJellyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindJellyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A412E62C48B8A100FA5F13 /* FindJellyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJellyTests.swift; sourceTree = "<group>"; };
+		04A412EC2C48B8A100FA5F13 /* FindJellyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindJellyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A412F02C48B8A100FA5F13 /* FindJellyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJellyUITests.swift; sourceTree = "<group>"; };
+		04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJellyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04A413062C48EB9C00FA5F13 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = FindJelly/Sources/Generated/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		04AFDA102C4DEB2000E50625 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04AFDA1C2C4E2B6E00E50625 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		04AFDA1E2C4E3E9800E50625 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		04AFDA202C4E42AB00E50625 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		393B861F177F08E6DA85B374 /* Pods-FindJelly-FindJellyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindJelly-FindJellyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindJelly-FindJellyUITests/Pods-FindJelly-FindJellyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B3CF48428E0BA9E73F44291 /* Pods-FindJelly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindJelly.debug.xcconfig"; path = "Target Support Files/Pods-FindJelly/Pods-FindJelly.debug.xcconfig"; sourceTree = "<group>"; };
+		3EF21394DC8F7697A7C3EEF7 /* Pods-FindJellyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindJellyTests.debug.xcconfig"; path = "Target Support Files/Pods-FindJellyTests/Pods-FindJellyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6191B11B24ED1D38CE2F4B7B /* Pods-FindJelly-FindJellyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindJelly-FindJellyUITests.release.xcconfig"; path = "Target Support Files/Pods-FindJelly-FindJellyUITests/Pods-FindJelly-FindJellyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A714500237923E5EAFE8F902 /* Pods-FindJellyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindJellyTests.release.xcconfig"; path = "Target Support Files/Pods-FindJellyTests/Pods-FindJellyTests.release.xcconfig"; sourceTree = "<group>"; };
+		C05556B3DDF0BBAC3AE7C70D /* Pods_FindJellyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindJellyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7A4506442317830DA01D21 /* Pods-FindJelly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindJelly.release.xcconfig"; path = "Target Support Files/Pods-FindJelly/Pods-FindJelly.release.xcconfig"; sourceTree = "<group>"; };
+		EFC87549C4BDCCE1BB0695AB /* Pods_FindJelly_FindJellyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindJelly_FindJellyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FAB8F19129B9997E2F94CF /* Pods_FindJelly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindJelly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A412C92C48B89F00FA5F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BD584741D8CDD2FA80EC12 /* Pods_FindJelly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A412DF2C48B8A100FA5F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E5F44F052B5B5A09F8C149 /* Pods_FindJellyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A412E92C48B8A100FA5F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D0C1DE63B95D56E5F0D547 /* Pods_FindJelly_FindJellyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04A412C32C48B89F00FA5F13 = {
+			isa = PBXGroup;
+			children = (
+				04A412CE2C48B89F00FA5F13 /* FindJelly */,
+				04A412E52C48B8A100FA5F13 /* FindJellyTests */,
+				04A412EF2C48B8A100FA5F13 /* FindJellyUITests */,
+				04A412CD2C48B89F00FA5F13 /* Products */,
+				6BBF67847BE6A15776A69531 /* Pods */,
+				9386BA22FEC6C9919981DFED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04A412CD2C48B89F00FA5F13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A412CC2C48B89F00FA5F13 /* FindJelly.app */,
+				04A412E22C48B8A100FA5F13 /* FindJellyTests.xctest */,
+				04A412EC2C48B8A100FA5F13 /* FindJellyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A412CE2C48B89F00FA5F13 /* FindJelly */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA1B2C4E2B5D00E50625 /* Extensions */,
+				04A413022C48BAB800FA5F13 /* Presentation */,
+				04A413002C48BA9B00FA5F13 /* Resources */,
+				04A412FF2C48B8CE00FA5F13 /* Application */,
+			);
+			path = FindJelly;
+			sourceTree = "<group>";
+		};
+		04A412E52C48B8A100FA5F13 /* FindJellyTests */ = {
+			isa = PBXGroup;
+			children = (
+				04A412E62C48B8A100FA5F13 /* FindJellyTests.swift */,
+			);
+			path = FindJellyTests;
+			sourceTree = "<group>";
+		};
+		04A412EF2C48B8A100FA5F13 /* FindJellyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04A412F02C48B8A100FA5F13 /* FindJellyUITests.swift */,
+				04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */,
+			);
+			path = FindJellyUITests;
+			sourceTree = "<group>";
+		};
+		04A412FF2C48B8CE00FA5F13 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */,
+				04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04A413002C48BA9B00FA5F13 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04A413012C48BAA600FA5F13 /* Sources */,
+				04A412DD2C48B8A100FA5F13 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04A413012C48BAA600FA5F13 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				04A413062C48EB9C00FA5F13 /* R.generated.swift */,
+				04A412D82C48B8A100FA5F13 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		04A413022C48BAB800FA5F13 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA0B2C4DE48E00E50625 /* TabBarController */,
+				04AFDA0E2C4DEAC700E50625 /* RegistrationViewController */,
+				04AFDA0F2C4DEAF600E50625 /* AuthorizationViewController */,
+				04AFDA122C4DEB6F00E50625 /* ProfileViewController */,
+				04AFDA152C4DEB8500E50625 /* ChatListViewController */,
+				04AFDA182C4DEBA700E50625 /* SettingsViewController */,
+				04A413032C48BAC400FA5F13 /* LaunchScreen */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		04A413032C48BAC400FA5F13 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04A412DA2C48B8A100FA5F13 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		04AFDA0B2C4DE48E00E50625 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		04AFDA0E2C4DEAC700E50625 /* RegistrationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04A412D32C48B89F00FA5F13 /* RegistrationViewController.swift */,
+			);
+			path = RegistrationViewController;
+			sourceTree = "<group>";
+		};
+		04AFDA0F2C4DEAF600E50625 /* AuthorizationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA102C4DEB2000E50625 /* AuthorizationViewController.swift */,
+			);
+			path = AuthorizationViewController;
+			sourceTree = "<group>";
+		};
+		04AFDA122C4DEB6F00E50625 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		04AFDA152C4DEB8500E50625 /* ChatListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */,
+			);
+			path = ChatListViewController;
+			sourceTree = "<group>";
+		};
+		04AFDA182C4DEBA700E50625 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		04AFDA1B2C4E2B5D00E50625 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA1C2C4E2B6E00E50625 /* UIImage+Extension.swift */,
+				04AFDA1E2C4E3E9800E50625 /* UITextField+Extension.swift */,
+				04AFDA202C4E42AB00E50625 /* UIButton+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6BBF67847BE6A15776A69531 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B3CF48428E0BA9E73F44291 /* Pods-FindJelly.debug.xcconfig */,
+				CC7A4506442317830DA01D21 /* Pods-FindJelly.release.xcconfig */,
+				393B861F177F08E6DA85B374 /* Pods-FindJelly-FindJellyUITests.debug.xcconfig */,
+				6191B11B24ED1D38CE2F4B7B /* Pods-FindJelly-FindJellyUITests.release.xcconfig */,
+				3EF21394DC8F7697A7C3EEF7 /* Pods-FindJellyTests.debug.xcconfig */,
+				A714500237923E5EAFE8F902 /* Pods-FindJellyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9386BA22FEC6C9919981DFED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3FAB8F19129B9997E2F94CF /* Pods_FindJelly.framework */,
+				EFC87549C4BDCCE1BB0695AB /* Pods_FindJelly_FindJellyUITests.framework */,
+				C05556B3DDF0BBAC3AE7C70D /* Pods_FindJellyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04A412CB2C48B89F00FA5F13 /* FindJelly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A412F62C48B8A100FA5F13 /* Build configuration list for PBXNativeTarget "FindJelly" */;
+			buildPhases = (
+				DD701778434EAB4D72F5DAA0 /* [CP] Check Pods Manifest.lock */,
+				04A413042C48E53700FA5F13 /* R.swift */,
+				04A413052C48E54400FA5F13 /* SwiftLint */,
+				04A412C82C48B89F00FA5F13 /* Sources */,
+				04A412C92C48B89F00FA5F13 /* Frameworks */,
+				04A412CA2C48B89F00FA5F13 /* Resources */,
+				41700A3C8D30B5A2249401BF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindJelly;
+			productName = FindJelly;
+			productReference = 04A412CC2C48B89F00FA5F13 /* FindJelly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04A412E12C48B8A100FA5F13 /* FindJellyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A412F92C48B8A100FA5F13 /* Build configuration list for PBXNativeTarget "FindJellyTests" */;
+			buildPhases = (
+				9DB41195B84A22313C1FF37F /* [CP] Check Pods Manifest.lock */,
+				04A412DE2C48B8A100FA5F13 /* Sources */,
+				04A412DF2C48B8A100FA5F13 /* Frameworks */,
+				04A412E02C48B8A100FA5F13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04A412E42C48B8A100FA5F13 /* PBXTargetDependency */,
+			);
+			name = FindJellyTests;
+			productName = FindJellyTests;
+			productReference = 04A412E22C48B8A100FA5F13 /* FindJellyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04A412EB2C48B8A100FA5F13 /* FindJellyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A412FC2C48B8A100FA5F13 /* Build configuration list for PBXNativeTarget "FindJellyUITests" */;
+			buildPhases = (
+				C8753698A6DAB4E55870D514 /* [CP] Check Pods Manifest.lock */,
+				04A412E82C48B8A100FA5F13 /* Sources */,
+				04A412E92C48B8A100FA5F13 /* Frameworks */,
+				04A412EA2C48B8A100FA5F13 /* Resources */,
+				02CF14A32394BD88C9AEF7B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04A412EE2C48B8A100FA5F13 /* PBXTargetDependency */,
+			);
+			name = FindJellyUITests;
+			productName = FindJellyUITests;
+			productReference = 04A412EC2C48B8A100FA5F13 /* FindJellyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04A412C42C48B89F00FA5F13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					04A412CB2C48B89F00FA5F13 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					04A412E12C48B8A100FA5F13 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 04A412CB2C48B89F00FA5F13;
+					};
+					04A412EB2C48B8A100FA5F13 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 04A412CB2C48B89F00FA5F13;
+					};
+				};
+			};
+			buildConfigurationList = 04A412C72C48B89F00FA5F13 /* Build configuration list for PBXProject "FindJelly" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04A412C32C48B89F00FA5F13;
+			productRefGroup = 04A412CD2C48B89F00FA5F13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A412CB2C48B89F00FA5F13 /* FindJelly */,
+				04A412E12C48B8A100FA5F13 /* FindJellyTests */,
+				04A412EB2C48B8A100FA5F13 /* FindJellyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04A412CA2C48B89F00FA5F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A412D92C48B8A100FA5F13 /* Assets.xcassets in Resources */,
+				04A412DC2C48B8A100FA5F13 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A412E02C48B8A100FA5F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A412EA2C48B8A100FA5F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02CF14A32394BD88C9AEF7B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindJelly-FindJellyUITests/Pods-FindJelly-FindJellyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindJelly-FindJellyUITests/Pods-FindJelly-FindJellyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindJelly-FindJellyUITests/Pods-FindJelly-FindJellyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		04A413042C48E53700FA5F13 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/FindJelly/Sources/Generated/R.generated.swift ",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/FindJelly/Sources/Generated/R.generated.swift\"\n\n";
+		};
+		04A413052C48E54400FA5F13 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		41700A3C8D30B5A2249401BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindJelly/Pods-FindJelly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindJelly/Pods-FindJelly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindJelly/Pods-FindJelly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DB41195B84A22313C1FF37F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindJellyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8753698A6DAB4E55870D514 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindJelly-FindJellyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD701778434EAB4D72F5DAA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindJelly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A412C82C48B89F00FA5F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AFDA1F2C4E3E9800E50625 /* UITextField+Extension.swift in Sources */,
+				04AFDA112C4DEB2000E50625 /* AuthorizationViewController.swift in Sources */,
+				04A412D42C48B89F00FA5F13 /* RegistrationViewController.swift in Sources */,
+				04AFDA172C4DEB9900E50625 /* ChatListViewController.swift in Sources */,
+				04A412D02C48B89F00FA5F13 /* AppDelegate.swift in Sources */,
+				04AFDA212C4E42AB00E50625 /* UIButton+Extension.swift in Sources */,
+				04AFDA0D2C4DE4AE00E50625 /* MainTabBarController.swift in Sources */,
+				04AFDA142C4DEB7C00E50625 /* ProfileViewController.swift in Sources */,
+				04A412D22C48B89F00FA5F13 /* SceneDelegate.swift in Sources */,
+				04AFDA1D2C4E2B6E00E50625 /* UIImage+Extension.swift in Sources */,
+				04A413072C48EB9C00FA5F13 /* R.generated.swift in Sources */,
+				04AFDA1A2C4DEBB200E50625 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A412DE2C48B8A100FA5F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A412E72C48B8A100FA5F13 /* FindJellyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A412E82C48B8A100FA5F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A412F32C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift in Sources */,
+				04A412F12C48B8A100FA5F13 /* FindJellyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04A412E42C48B8A100FA5F13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A412CB2C48B89F00FA5F13 /* FindJelly */;
+			targetProxy = 04A412E32C48B8A100FA5F13 /* PBXContainerItemProxy */;
+		};
+		04A412EE2C48B8A100FA5F13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A412CB2C48B89F00FA5F13 /* FindJelly */;
+			targetProxy = 04A412ED2C48B8A100FA5F13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04A412DA2C48B8A100FA5F13 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A412DB2C48B8A100FA5F13 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04A412F42C48B8A100FA5F13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04A412F52C48B8A100FA5F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04A412F72C48B8A100FA5F13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3CF48428E0BA9E73F44291 /* Pods-FindJelly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMQYZYH462;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindJelly/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Archimedes.FindJelly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04A412F82C48B8A100FA5F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC7A4506442317830DA01D21 /* Pods-FindJelly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMQYZYH462;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindJelly/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Archimedes.FindJelly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		04A412FA2C48B8A100FA5F13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF21394DC8F7697A7C3EEF7 /* Pods-FindJellyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMQYZYH462;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Archimedes.FindJellyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindJelly.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindJelly";
+			};
+			name = Debug;
+		};
+		04A412FB2C48B8A100FA5F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A714500237923E5EAFE8F902 /* Pods-FindJellyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMQYZYH462;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Archimedes.FindJellyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindJelly.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindJelly";
+			};
+			name = Release;
+		};
+		04A412FD2C48B8A100FA5F13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 393B861F177F08E6DA85B374 /* Pods-FindJelly-FindJellyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMQYZYH462;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Archimedes.FindJellyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindJelly;
+			};
+			name = Debug;
+		};
+		04A412FE2C48B8A100FA5F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6191B11B24ED1D38CE2F4B7B /* Pods-FindJelly-FindJellyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PMQYZYH462;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Archimedes.FindJellyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindJelly;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A412C72C48B89F00FA5F13 /* Build configuration list for PBXProject "FindJelly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A412F42C48B8A100FA5F13 /* Debug */,
+				04A412F52C48B8A100FA5F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A412F62C48B8A100FA5F13 /* Build configuration list for PBXNativeTarget "FindJelly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A412F72C48B8A100FA5F13 /* Debug */,
+				04A412F82C48B8A100FA5F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A412F92C48B8A100FA5F13 /* Build configuration list for PBXNativeTarget "FindJellyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A412FA2C48B8A100FA5F13 /* Debug */,
+				04A412FB2C48B8A100FA5F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A412FC2C48B8A100FA5F13 /* Build configuration list for PBXNativeTarget "FindJellyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A412FD2C48B8A100FA5F13 /* Debug */,
+				04A412FE2C48B8A100FA5F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04A412C42C48B89F00FA5F13 /* Project object */;
+}

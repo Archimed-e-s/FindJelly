@@ -7,8 +7,7 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let registrationViewController = RegistrationViewController()
-        let authorizationViewController = AuthorizationViewController()
+        let loginViewController = LoginViewController()
         let profileViewController = ProfileViewController()
         let chatListViewController = ChatListViewController()
         let settingsViewController = SettingsViewController()

@@ -1,10 +1,15 @@
 import UIKit
+import GoogleSignIn
+import Firebase
 
-final class RegistrationViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     // MARK: - Private properties
 
-    private var isChanged: Bool = false
+    private var signInButton = GIDSignInButton()
+    private var checkTextFields = LoginValidationService.shared
+    private var animations = LoginAnimations.shared
+    private var service = AuthenticationManager.shared
 
     private lazy var containerUI: UIView = {
         let view = UIView()
@@ -20,7 +25,7 @@ final class RegistrationViewController: UIViewController {
             R.color.primaryColor(),
             UIFont(name: "Arial-BoldMT",size: 24)
         )
-        button.addTarget(self, action: #selector(authorizationButtonDidTap), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
 
@@ -31,7 +36,7 @@ final class RegistrationViewController: UIViewController {
             R.color.secondaryColor(),
             UIFont(name: "Arial-BoldMT",size: 16)
         )
-        button.addTarget(self, action: #selector(authorizationButtonDidTap), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
 
@@ -62,13 +67,14 @@ final class RegistrationViewController: UIViewController {
             R.color.primaryColor()?.withAlphaComponent(75),
             UIFont(name: "Arial",size: 14)!
         )
-        button.addTarget(self, action: #selector(authorizationButtonDidTap), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
 
     private lazy var createAccountButton: UIButton = {
         let button = UIButton()
         button.setPrimaryButton("Создать учетную запись", UIFont(name: "Arial-BoldMT", size: 14), 19)
+        button.addTarget(self, action: #selector(createUserButtonDidTap), for: .touchUpInside)
         return button
     }()
 
@@ -79,6 +85,14 @@ final class RegistrationViewController: UIViewController {
         return button
     }()
 
+    private lazy var informationLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = UIFont(name: "Arial", size: 12)
+        label.textColor = UIColor.red
+        return label
+    }()
     private lazy var mainView = {
         let view = UIView()
         return view
@@ -91,12 +105,14 @@ final class RegistrationViewController: UIViewController {
         view.backgroundColor = .white
         addSubviews()
         setConstraints()
+        setGoogleSignInButton()
     }
 
     // MARK: - Private Methods
 
     private func addSubviews() {
         view.addSubview(containerUI)
+        view.addSubview(signInButton)
         [
             registrationButton,
             authorizationButton,
@@ -104,7 +120,7 @@ final class RegistrationViewController: UIViewController {
             passwordTextField,
             confirmPasswordTextField,
             alreadyCreatedAccountButton,
-            createAccountButton
+            createAccountButton,
         ].forEach({ containerUI.addSubview( $0 ) })
     }
 
@@ -147,75 +163,110 @@ final class RegistrationViewController: UIViewController {
                 createAccountButton.bottomAnchor.constraint(equalTo: containerUI.bottomAnchor),
                 createAccountButton.leadingAnchor.constraint(equalTo: containerUI.leadingAnchor, constant: 18),
                 createAccountButton.trailingAnchor.constraint(equalTo: containerUI.trailingAnchor, constant: -18),
-                createAccountButton.heightAnchor.constraint(equalToConstant: 34)
+                createAccountButton.heightAnchor.constraint(equalToConstant: 34),
+
+                signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                signInButton.topAnchor.constraint(equalTo: containerUI.bottomAnchor, constant: 15),
+                signInButton.heightAnchor.constraint(equalToConstant: 50),
+                signInButton.widthAnchor.constraint(equalToConstant: 150),
+
             ]
         )
     }
 
-    @objc func authorizationButtonDidTap() {
-        if isChanged == true {
-            DispatchQueue.main.async {
-                UIView.animate(
-                    withDuration: 0.3) { [weak self] in
-                        guard let self = self else { return }
-                        emailTextField.text = ""
-                        passwordTextField.text = ""
-                        confirmPasswordTextField.text = ""
-                        registrationButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                        authorizationButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                        registrationButton.setTitleColor(R.color.primaryColor(), for: .normal)
-                        authorizationButton.setTitleColor(R.color.secondaryColor(), for: .normal)
-                        confirmPasswordTextField.placeholder = "Повторить пароль"
-                        emailTextField.placeholder = "Emial"
-                        alreadyCreatedAccountButton.setTitle("Уже есть аккаунт?", for: .normal)
-                        createAccountButton.setTitle("Создать учетную запись", for: .normal)
-                        containerUI.addSubview(confirmPasswordTextField)
-                        confirmPasswordTextField.transform = CGAffineTransform(scaleX: 1, y: 1)
-                        NSLayoutConstraint.activate([
-                            confirmPasswordTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
-                            confirmPasswordTextField.leadingAnchor.constraint(equalTo: containerUI.leadingAnchor),
-                            confirmPasswordTextField.trailingAnchor.constraint(equalTo: containerUI.trailingAnchor),
-                            confirmPasswordTextField.heightAnchor.constraint(equalToConstant: 29)
-                        ])
-                        alreadyCreatedAccountButton.transform = CGAffineTransform(translationX: 0, y: 0)
-                        createAccountButton.transform = CGAffineTransform(translationX: 0, y: 0)
-                        forgotPassworButton.removeFromSuperview()
-                        isChanged.toggle()
+    private func setGoogleSignInButton() {
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.addTarget(self, action: #selector(signInGoogleDidTap), for: .touchUpInside)
+        signInButton.style = .wide
+    }
+
+    // MARK: - Action
+
+    func signInGoogle() async throws {
+        guard let topVC = Utilities.shared.topViewController() else {
+            throw URLError(.cannotFindHost)
+        }
+        let gidSignInResult = try await GIDSignIn.sharedInstance.signIn(withPresenting: topVC)
+        guard let idToken = gidSignInResult.user.idToken?.tokenString else {
+            throw URLError(.badServerResponse)
+        }
+        print(gidSignInResult.description)
+        let accessToken = gidSignInResult.user.accessToken.tokenString
+
+        let tokens = GoogleSignInResultModel(idToken: idToken, accessToken: accessToken)
+        try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
+    }
+
+    @objc func signInGoogleDidTap() {
+        Task {
+            do {
+                try await signInGoogle()
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+    @objc func loginButtonDidTap() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            animations.rollUpDownUI(
+                emailTextField,
+                passwordTextField,
+                confirmPasswordTextField,
+                registrationButton,
+                authorizationButton,
+                alreadyCreatedAccountButton,
+                createAccountButton,
+                containerUI,
+                forgotPassworButton,
+                informationLabel
+            )
+        }
+    }
+
+    @objc func createUserButtonDidTap() {
+        view.addSubview(informationLabel)
+        NSLayoutConstraint.activate([
+            informationLabel.topAnchor.constraint(equalTo: alreadyCreatedAccountButton.topAnchor, constant: -20),
+            informationLabel.centerXAnchor.constraint(equalTo: containerUI.centerXAnchor),
+            informationLabel.heightAnchor.constraint(equalToConstant: 15),
+            informationLabel.widthAnchor.constraint(equalToConstant: 340)
+        ])
+        if checkTextFields.validField(emailTextField), checkTextFields.validField(passwordTextField) {
+            if passwordTextField.text == confirmPasswordTextField.text {
+                print(emailTextField.text, passwordTextField.text)
+                informationLabel.removeFromSuperview()
+                service.createUset(with: LoginFields(email: emailTextField.text!, password: passwordTextField.text!)) { [weak self] code in
+                    guard let self = self else { return }
+                    switch code.code {
+                    case 0:
+                        print("Status code: 0 - Failed")
+                    case 1:
+                        print("Status code: 1 - Success")
+                        service.confirmEmail()
+                    default:
+                        print("Status code nil")
                     }
+                }
+
+            } else {
+                containerUI.addSubview(informationLabel)
+                informationLabel.text = "Неверно введен повтор пароля"
+                passwordTextField.backgroundColor = R.color.notValidTextFieldsColor()
+                confirmPasswordTextField.backgroundColor = R.color.notValidTextFieldsColor()
             }
         } else {
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.3) { [weak self] in
-                    guard let self = self else { return }
-                    emailTextField.text = ""
-                    passwordTextField.text = ""
-                    confirmPasswordTextField.placeholder = ""
-                    registrationButton.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-                    authorizationButton.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
-                    registrationButton.setTitleColor(R.color.secondaryColor(), for: .normal)
-                    authorizationButton.setTitleColor(R.color.primaryColor(), for: .normal)
-                    emailTextField.placeholder = "Логин"
-                    alreadyCreatedAccountButton.setTitle("У меня нет аккаунта", for: .normal)
-                    createAccountButton.setTitle("Войти", for: .normal)
-                    confirmPasswordTextField.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-                    alreadyCreatedAccountButton.transform = CGAffineTransform(translationX: 0, y: -45)
-                    createAccountButton.transform = CGAffineTransform(translationX: 0, y: -45)
-                } completion: { [weak self] _ in
-                    guard let self = self else { return }
-                    confirmPasswordTextField.removeFromSuperview()
-                    containerUI.addSubview(forgotPassworButton)
-                    NSLayoutConstraint.activate([
-                        forgotPassworButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 3),
-                        forgotPassworButton.leadingAnchor.constraint(equalTo: containerUI.leadingAnchor, constant: 13),
-                        forgotPassworButton.heightAnchor.constraint(equalToConstant: 12)
-                    ])
-                    isChanged.toggle()
-                }
-            }
+            containerUI.addSubview(informationLabel)
+            passwordTextField.backgroundColor = R.color.notValidTextFieldsColor()
+            confirmPasswordTextField.backgroundColor = R.color.notValidTextFieldsColor()
+            informationLabel.text = "Введите корректный адрес электроной почты и пароль"
+
         }
     }
 
     @objc func forgotPasswordDidTap() {
         print(#function)
     }
+
 }

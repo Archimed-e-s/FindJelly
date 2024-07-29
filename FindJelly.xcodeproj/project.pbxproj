@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045079E72C4F8799000CF50C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045079E62C4F8799000CF50C /* GoogleService-Info.plist */; };
+		045079EA2C50BD4F000CF50C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079E92C50BD4F000CF50C /* Utilities.swift */; };
+		045079EE2C50C0BA000CF50C /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079ED2C50C0BA000CF50C /* AuthenticationManager.swift */; };
+		045079F02C50CD22000CF50C /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079EF2C50CD22000CF50C /* AuthDataResultModel.swift */; };
+		045079F32C51F42F000CF50C /* LoginValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079F22C51F42F000CF50C /* LoginValidationService.swift */; };
+		045079F52C521933000CF50C /* LoginAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079F42C521933000CF50C /* LoginAnimations.swift */; };
 		04A412D02C48B89F00FA5F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */; };
 		04A412D22C48B89F00FA5F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */; };
-		04A412D42C48B89F00FA5F13 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D32C48B89F00FA5F13 /* RegistrationViewController.swift */; };
+		04A412D42C48B89F00FA5F13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D32C48B89F00FA5F13 /* LoginViewController.swift */; };
 		04A412D92C48B8A100FA5F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A412D82C48B8A100FA5F13 /* Assets.xcassets */; };
 		04A412DC2C48B8A100FA5F13 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04A412DB2C48B8A100FA5F13 /* Base */; };
 		04A412E72C48B8A100FA5F13 /* FindJellyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412E62C48B8A100FA5F13 /* FindJellyTests.swift */; };
@@ -17,7 +23,6 @@
 		04A412F32C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */; };
 		04A413072C48EB9C00FA5F13 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A413062C48EB9C00FA5F13 /* R.generated.swift */; };
 		04AFDA0D2C4DE4AE00E50625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */; };
-		04AFDA112C4DEB2000E50625 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA102C4DEB2000E50625 /* AuthorizationViewController.swift */; };
 		04AFDA142C4DEB7C00E50625 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */; };
 		04AFDA172C4DEB9900E50625 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */; };
 		04AFDA1A2C4DEBB200E50625 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */; };
@@ -47,10 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045079E62C4F8799000CF50C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		045079E92C50BD4F000CF50C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		045079ED2C50C0BA000CF50C /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		045079EF2C50CD22000CF50C /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		045079F22C51F42F000CF50C /* LoginValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationService.swift; sourceTree = "<group>"; };
+		045079F42C521933000CF50C /* LoginAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimations.swift; sourceTree = "<group>"; };
 		04A412CC2C48B89F00FA5F13 /* FindJelly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindJelly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04A412D32C48B89F00FA5F13 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		04A412D32C48B89F00FA5F13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04A412D82C48B8A100FA5F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A412DB2C48B8A100FA5F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A412DD2C48B8A100FA5F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +72,6 @@
 		04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJellyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		04A413062C48EB9C00FA5F13 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = FindJelly/Sources/Generated/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		04AFDA102C4DEB2000E50625 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045079E82C50BD3C000CF50C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				045079E92C50BD4F000CF50C /* Utilities.swift */,
+				045079F42C521933000CF50C /* LoginAnimations.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		045079EB2C50C099000CF50C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				045079F12C51F413000CF50C /* CheckLoginFileds */,
+				045079EC2C50C0A3000CF50C /* AuthenticationManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		045079EC2C50C0A3000CF50C /* AuthenticationManager */ = {
+			isa = PBXGroup;
+			children = (
+				045079ED2C50C0BA000CF50C /* AuthenticationManager.swift */,
+				045079EF2C50CD22000CF50C /* AuthDataResultModel.swift */,
+			);
+			path = AuthenticationManager;
+			sourceTree = "<group>";
+		};
+		045079F12C51F413000CF50C /* CheckLoginFileds */ = {
+			isa = PBXGroup;
+			children = (
+				045079F22C51F42F000CF50C /* LoginValidationService.swift */,
+			);
+			path = CheckLoginFileds;
+			sourceTree = "<group>";
+		};
 		04A412C32C48B89F00FA5F13 = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +177,12 @@
 		04A412CE2C48B89F00FA5F13 /* FindJelly */ = {
 			isa = PBXGroup;
 			children = (
+				045079EB2C50C099000CF50C /* Services */,
+				045079E82C50BD3C000CF50C /* Utilities */,
 				04AFDA1B2C4E2B5D00E50625 /* Extensions */,
 				04A413022C48BAB800FA5F13 /* Presentation */,
-				04A413002C48BA9B00FA5F13 /* Resources */,
 				04A412FF2C48B8CE00FA5F13 /* Application */,
+				04A413002C48BA9B00FA5F13 /* Resources */,
 			);
 			path = FindJelly;
 			sourceTree = "<group>";
@@ -169,8 +216,10 @@
 		04A413002C48BA9B00FA5F13 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04A413032C48BAC400FA5F13 /* LaunchScreen */,
 				04A413012C48BAA600FA5F13 /* Sources */,
 				04A412DD2C48B8A100FA5F13 /* Info.plist */,
+				045079E62C4F8799000CF50C /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -187,13 +236,8 @@
 		04A413022C48BAB800FA5F13 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				04AFDA0B2C4DE48E00E50625 /* TabBarController */,
-				04AFDA0E2C4DEAC700E50625 /* RegistrationViewController */,
-				04AFDA0F2C4DEAF600E50625 /* AuthorizationViewController */,
-				04AFDA122C4DEB6F00E50625 /* ProfileViewController */,
-				04AFDA152C4DEB8500E50625 /* ChatListViewController */,
-				04AFDA182C4DEBA700E50625 /* SettingsViewController */,
-				04A413032C48BAC400FA5F13 /* LaunchScreen */,
+				04AFDA232C4F758200E50625 /* Login */,
+				04AFDA222C4F756700E50625 /* App */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -214,20 +258,12 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
-		04AFDA0E2C4DEAC700E50625 /* RegistrationViewController */ = {
+		04AFDA0E2C4DEAC700E50625 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04A412D32C48B89F00FA5F13 /* RegistrationViewController.swift */,
+				04A412D32C48B89F00FA5F13 /* LoginViewController.swift */,
 			);
-			path = RegistrationViewController;
-			sourceTree = "<group>";
-		};
-		04AFDA0F2C4DEAF600E50625 /* AuthorizationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				04AFDA102C4DEB2000E50625 /* AuthorizationViewController.swift */,
-			);
-			path = AuthorizationViewController;
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		04AFDA122C4DEB6F00E50625 /* ProfileViewController */ = {
@@ -262,6 +298,25 @@
 				04AFDA202C4E42AB00E50625 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04AFDA222C4F756700E50625 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA182C4DEBA700E50625 /* SettingsViewController */,
+				04AFDA152C4DEB8500E50625 /* ChatListViewController */,
+				04AFDA122C4DEB6F00E50625 /* ProfileViewController */,
+				04AFDA0B2C4DE48E00E50625 /* TabBarController */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		04AFDA232C4F758200E50625 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04AFDA0E2C4DEAC700E50625 /* LoginViewController */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		6BBF67847BE6A15776A69531 /* Pods */ = {
@@ -400,6 +455,7 @@
 			files = (
 				04A412D92C48B8A100FA5F13 /* Assets.xcassets in Resources */,
 				04A412DC2C48B8A100FA5F13 /* Base in Resources */,
+				045079E72C4F8799000CF50C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,16 +623,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AFDA1F2C4E3E9800E50625 /* UITextField+Extension.swift in Sources */,
-				04AFDA112C4DEB2000E50625 /* AuthorizationViewController.swift in Sources */,
-				04A412D42C48B89F00FA5F13 /* RegistrationViewController.swift in Sources */,
+				04A412D42C48B89F00FA5F13 /* LoginViewController.swift in Sources */,
+				045079F02C50CD22000CF50C /* AuthDataResultModel.swift in Sources */,
 				04AFDA172C4DEB9900E50625 /* ChatListViewController.swift in Sources */,
 				04A412D02C48B89F00FA5F13 /* AppDelegate.swift in Sources */,
 				04AFDA212C4E42AB00E50625 /* UIButton+Extension.swift in Sources */,
 				04AFDA0D2C4DE4AE00E50625 /* MainTabBarController.swift in Sources */,
+				045079EA2C50BD4F000CF50C /* Utilities.swift in Sources */,
+				045079EE2C50C0BA000CF50C /* AuthenticationManager.swift in Sources */,
 				04AFDA142C4DEB7C00E50625 /* ProfileViewController.swift in Sources */,
 				04A412D22C48B89F00FA5F13 /* SceneDelegate.swift in Sources */,
+				045079F32C51F42F000CF50C /* LoginValidationService.swift in Sources */,
 				04AFDA1D2C4E2B6E00E50625 /* UIImage+Extension.swift in Sources */,
 				04A413072C48EB9C00FA5F13 /* R.generated.swift in Sources */,
+				045079F52C521933000CF50C /* LoginAnimations.swift in Sources */,
 				04AFDA1A2C4DEBB200E50625 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

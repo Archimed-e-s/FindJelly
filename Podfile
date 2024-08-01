@@ -8,6 +8,7 @@ target 'FindJelly' do
   pod 'R.swift', '~> 7.3'
   pod 'SwiftLint', '~> 0.50'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
 
   target 'FindJellyTests' do

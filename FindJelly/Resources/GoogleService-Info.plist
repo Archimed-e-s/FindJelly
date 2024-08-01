@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1095794707400-3u05k74sf2g8pfafmna0pfma55i9b7dp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1095794707400-3u05k74sf2g8pfafmna0pfma55i9b7dp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyADssznGi1rAnjPFz9D1yAMckKV_q2-pvY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1095794707400</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Archimedes.FindJelly</string>
+	<key>PROJECT_ID</key>
+	<string>findjelly-81167</string>
+	<key>STORAGE_BUCKET</key>
+	<string>findjelly-81167.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1095794707400:ios:fa0c5860bf85dbeb36cefd</string>
+</dict>
+</plist>

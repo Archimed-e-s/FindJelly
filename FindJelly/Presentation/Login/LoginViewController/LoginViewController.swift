@@ -6,7 +6,8 @@ final class LoginViewController: UIViewController {
 
     // MARK: - Private properties
 
-    private var signInButton = GIDSignInButton()
+    var isUserAuth = UserDefaults.standard
+    private var signInGoogleButton = GIDSignInButton()
     private var checkTextFields = LoginValidationService.shared
     private var animations = LoginAnimations.shared
     private var service = AuthenticationManager.shared
@@ -71,10 +72,19 @@ final class LoginViewController: UIViewController {
         return button
     }()
 
-    private lazy var createAccountButton: UIButton = {
+    private lazy var signUpButton: UIButton = {
         let button = UIButton()
         button.setPrimaryButton("Создать учетную запись", UIFont(name: "Arial-BoldMT", size: 14), 19)
-        button.addTarget(self, action: #selector(createUserButtonDidTap), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signUpButtonDidTap), for: .touchUpInside)
+        print("signUp")
+        return button
+    }()
+
+    private lazy var signInButton: UIButton = {
+        let button = UIButton()
+        button.setPrimaryButton("Войти", UIFont(name: "Arial-BoldMT", size: 14), 19)
+        button.addTarget(self, action: #selector(signInButtonDidTap), for: .touchUpInside)
+        print("signUp")
         return button
     }()
 
@@ -112,7 +122,7 @@ final class LoginViewController: UIViewController {
 
     private func addSubviews() {
         view.addSubview(containerUI)
-        view.addSubview(signInButton)
+        view.addSubview(informationLabel)
         [
             registrationButton,
             authorizationButton,
@@ -120,7 +130,8 @@ final class LoginViewController: UIViewController {
             passwordTextField,
             confirmPasswordTextField,
             alreadyCreatedAccountButton,
-            createAccountButton,
+            signInGoogleButton,
+            signUpButton
         ].forEach({ containerUI.addSubview( $0 ) })
     }
 
@@ -160,29 +171,30 @@ final class LoginViewController: UIViewController {
                 alreadyCreatedAccountButton.centerXAnchor.constraint(equalTo: containerUI.centerXAnchor),
                 alreadyCreatedAccountButton.heightAnchor.constraint(equalToConstant: 14),
 
-                createAccountButton.bottomAnchor.constraint(equalTo: containerUI.bottomAnchor),
-                createAccountButton.leadingAnchor.constraint(equalTo: containerUI.leadingAnchor, constant: 18),
-                createAccountButton.trailingAnchor.constraint(equalTo: containerUI.trailingAnchor, constant: -18),
-                createAccountButton.heightAnchor.constraint(equalToConstant: 34),
+                signUpButton.bottomAnchor.constraint(equalTo: containerUI.bottomAnchor),
+                signUpButton.leadingAnchor.constraint(equalTo: containerUI.leadingAnchor, constant: 18),
+                signUpButton.trailingAnchor.constraint(equalTo: containerUI.trailingAnchor, constant: -18),
+                signUpButton.heightAnchor.constraint(equalToConstant: 34),
 
-                signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                signInButton.topAnchor.constraint(equalTo: containerUI.bottomAnchor, constant: 15),
-                signInButton.heightAnchor.constraint(equalToConstant: 50),
-                signInButton.widthAnchor.constraint(equalToConstant: 150),
+                signInGoogleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                signInGoogleButton.topAnchor.constraint(equalTo: containerUI.bottomAnchor, constant: 15),
 
+                informationLabel.topAnchor.constraint(equalTo: alreadyCreatedAccountButton.topAnchor, constant: -20),
+                informationLabel.centerXAnchor.constraint(equalTo: containerUI.centerXAnchor),
+                informationLabel.heightAnchor.constraint(equalToConstant: 15),
+                informationLabel.widthAnchor.constraint(equalToConstant: 340)
             ]
         )
     }
 
     private func setGoogleSignInButton() {
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.addTarget(self, action: #selector(signInGoogleDidTap), for: .touchUpInside)
-        signInButton.style = .wide
+        signInGoogleButton.translatesAutoresizingMaskIntoConstraints = false
+        signInGoogleButton.addTarget(self, action: #selector(signInGoogleDidTap), for: .touchUpInside)
+        view.endEditing(true)
+        signInGoogleButton.style = .wide
     }
 
-    // MARK: - Action
-
-    func signInGoogle() async throws {
+    private func signInGoogle() async throws {
         guard let topVC = Utilities.shared.topViewController() else {
             throw URLError(.cannotFindHost)
         }
@@ -190,12 +202,12 @@ final class LoginViewController: UIViewController {
         guard let idToken = gidSignInResult.user.idToken?.tokenString else {
             throw URLError(.badServerResponse)
         }
-        print(gidSignInResult.description)
         let accessToken = gidSignInResult.user.accessToken.tokenString
-
         let tokens = GoogleSignInResultModel(idToken: idToken, accessToken: accessToken)
         try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
     }
+
+    // MARK: - Action
 
     @objc func signInGoogleDidTap() {
         Task {
@@ -217,7 +229,8 @@ final class LoginViewController: UIViewController {
                 registrationButton,
                 authorizationButton,
                 alreadyCreatedAccountButton,
-                createAccountButton,
+                signInButton,
+                signUpButton,
                 containerUI,
                 forgotPassworButton,
                 informationLabel
@@ -225,43 +238,67 @@ final class LoginViewController: UIViewController {
         }
     }
 
-    @objc func createUserButtonDidTap() {
-        view.addSubview(informationLabel)
-        NSLayoutConstraint.activate([
-            informationLabel.topAnchor.constraint(equalTo: alreadyCreatedAccountButton.topAnchor, constant: -20),
-            informationLabel.centerXAnchor.constraint(equalTo: containerUI.centerXAnchor),
-            informationLabel.heightAnchor.constraint(equalToConstant: 15),
-            informationLabel.widthAnchor.constraint(equalToConstant: 340)
-        ])
+    @objc func signUpButtonDidTap() {
         if checkTextFields.validField(emailTextField), checkTextFields.validField(passwordTextField) {
             if passwordTextField.text == confirmPasswordTextField.text {
-                print(emailTextField.text, passwordTextField.text)
-                informationLabel.removeFromSuperview()
-                service.createUset(with: LoginFields(email: emailTextField.text!, password: passwordTextField.text!)) { [weak self] code in
+                service.createUser(
+                    with: LoginFields(
+                        email: emailTextField.text!,
+                        password: passwordTextField.text!)
+                ) { [weak self] code in
                     guard let self = self else { return }
-                    switch code.code {
-                    case 0:
-                        print("Status code: 0 - Failed")
-                    case 1:
-                        print("Status code: 1 - Success")
+                    switch code {
+                    case .error:
+                        informationLabel.text = "Status code: 0 - Failed"
+                    case .success:
                         service.confirmEmail()
                     default:
-                        print("Status code nil")
+                        informationLabel.text = "Status code nil"
                     }
                 }
-
             } else {
-                containerUI.addSubview(informationLabel)
                 informationLabel.text = "Неверно введен повтор пароля"
                 passwordTextField.backgroundColor = R.color.notValidTextFieldsColor()
                 confirmPasswordTextField.backgroundColor = R.color.notValidTextFieldsColor()
             }
         } else {
-            containerUI.addSubview(informationLabel)
+            informationLabel.text = "Введите корректный адрес электроной почты и пароль"
             passwordTextField.backgroundColor = R.color.notValidTextFieldsColor()
             confirmPasswordTextField.backgroundColor = R.color.notValidTextFieldsColor()
-            informationLabel.text = "Введите корректный адрес электроной почты и пароль"
+        }
+    }
 
+    @objc func signInButtonDidTap() {
+        if checkTextFields.validField(emailTextField), checkTextFields.validField(passwordTextField) {
+            let authData = LoginFields(email: emailTextField.text!, password: passwordTextField.text!)
+            service.authInApp(authData) { [weak self] response in
+                guard let self = self else { return }
+                switch response {
+                case .success:
+                    isUserAuth.set(true, forKey: "isLogin")
+                    let mainViewController = MainTabBarController()
+                    view.insertSubview(mainViewController.view, at: 2)
+                    print("success")
+                case .noVerify:
+                    let alertController = UIAlertController(
+                        title: "Верификация",
+                        message: "Подтвердите адрес эл. почты, который был отпрлен на ваш email",
+                        preferredStyle: .alert
+                    )
+                    let verifyButton = UIAlertAction(title: "Хорошо", style: .cancel)
+                    alertController.addAction(verifyButton)
+                    present(alertController, animated: true)
+                case .error:
+                    let alertController = UIAlertController(
+                        title: "Упс! Что-то пошло не так...",
+                        message: "Скорее всего логин или пароль были введены неверно. Пожалуйста проверьте корректность введеных данных",
+                        preferredStyle: .alert
+                    )
+                    let verifyButton = UIAlertAction(title: "Хорошо", style: .destructive)
+                    alertController.addAction(verifyButton)
+                    present(alertController, animated: true)
+                }
+            }
         }
     }
 

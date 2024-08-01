@@ -55,7 +55,6 @@ final class LoginValidationService {
         }
     }
 
-    // valid view
     private func validView(_ field: UITextField, _ valid: Bool) {
         if valid {
             field.backgroundColor = R.color.textFieldsColor()

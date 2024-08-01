@@ -8,23 +8,13 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let loginViewController = LoginViewController()
-        let profileViewController = ProfileViewController()
-        let chatListViewController = ChatListViewController()
+        let photoEditingViewController = PhotoEditingViewController()
         let settingsViewController = SettingsViewController()
 
         viewControllers = [
             generateNavigationControllers(
-                rootViewController: profileViewController,
+                rootViewController: photoEditingViewController,
                 image: R.image.user()!.resize(
-                    targetSize: CGSize(
-                        width: 30,
-                        height: 30
-                    )
-                )
-            ),
-            generateNavigationControllers(
-                rootViewController: chatListViewController,
-                image: R.image.chat()!.resize(
                     targetSize: CGSize(
                         width: 30,
                         height: 30
@@ -49,6 +39,8 @@ class MainTabBarController: UITabBarController {
     ) -> UIViewController {
         let navigationVC = UINavigationController(rootViewController: rootViewController)
         navigationVC.tabBarItem.image = image
+        UITabBar.appearance().unselectedItemTintColor = R.color.secondaryColor()
+        UITabBar.appearance().tintColor = R.color.primaryColor()
         return navigationVC
     }
 

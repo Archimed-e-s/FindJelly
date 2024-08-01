@@ -6,8 +6,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var isUserAuth = UserDefaults.standard
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        isUserAuth.setValue(false, forKey: "isLogin") // меняя это значение мы определяем авторизован пользователь или нет
         guard let windowScene = (scene as? UIWindowScene) else { return }
+//        isUserAuth.set(false, forKey: "isLogin")  // - return to the default registration screen when flag is false
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         let isLogin = isUserAuth.object(forKey: "isLogin") as? Bool ?? false
@@ -21,14 +21,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.makeKeyAndVisible()
         }
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {}
-
-    func sceneDidBecomeActive(_ scene: UIScene) {}
-
-    func sceneWillResignActive(_ scene: UIScene) {}
-
-    func sceneWillEnterForeground(_ scene: UIScene) {}
-
-    func sceneDidEnterBackground(_ scene: UIScene) {}
 }

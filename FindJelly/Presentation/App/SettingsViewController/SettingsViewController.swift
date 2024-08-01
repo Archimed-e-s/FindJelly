@@ -2,8 +2,6 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
 
-    // MARK: - Public Properties
-
     // MARK: - Private properties
 
     private lazy var mainView = {

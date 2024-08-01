@@ -64,45 +64,15 @@ struct _R {
     var unreadedMessageColor: RswiftResources.ColorResource { .init(name: "UnreadedMessageColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 12 images.
+  /// This `_R.image` struct is generated, and contains static references to 2 images.
   struct image {
     let bundle: Foundation.Bundle
-
-    /// Image `AddFriendIcon`.
-    var addFriendIcon: RswiftResources.ImageResource { .init(name: "AddFriendIcon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `AlreadyAddedIcon`.
-    var alreadyAddedIcon: RswiftResources.ImageResource { .init(name: "AlreadyAddedIcon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `ChangeDataIcon`.
-    var changeDataIcon: RswiftResources.ImageResource { .init(name: "ChangeDataIcon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `DefaultProfileIcon`.
-    var defaultProfileIcon: RswiftResources.ImageResource { .init(name: "DefaultProfileIcon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `SearchFriendsImage`.
-    var searchFriendsImage: RswiftResources.ImageResource { .init(name: "SearchFriendsImage", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `SendMessageIcon`.
-    var sendMessageIcon: RswiftResources.ImageResource { .init(name: "SendMessageIcon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `chat`.
-    var chat: RswiftResources.ImageResource { .init(name: "chat", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `chatActive`.
-    var chatActive: RswiftResources.ImageResource { .init(name: "chatActive", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `settings`.
     var settings: RswiftResources.ImageResource { .init(name: "settings", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `settingsActive`.
-    var settingsActive: RswiftResources.ImageResource { .init(name: "settingsActive", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `user`.
     var user: RswiftResources.ImageResource { .init(name: "user", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `userActive`.
-    var userActive: RswiftResources.ImageResource { .init(name: "userActive", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.

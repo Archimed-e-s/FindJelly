@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		045079E72C4F8799000CF50C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045079E62C4F8799000CF50C /* GoogleService-Info.plist */; };
 		045079EA2C50BD4F000CF50C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079E92C50BD4F000CF50C /* Utilities.swift */; };
 		045079EE2C50C0BA000CF50C /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079ED2C50C0BA000CF50C /* AuthenticationManager.swift */; };
 		045079F02C50CD22000CF50C /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079EF2C50CD22000CF50C /* AuthDataResultModel.swift */; };
 		045079F32C51F42F000CF50C /* LoginValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079F22C51F42F000CF50C /* LoginValidationService.swift */; };
 		045079F52C521933000CF50C /* LoginAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079F42C521933000CF50C /* LoginAnimations.swift */; };
+		045079FD2C58D3B1000CF50C /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079FC2C58D3B1000CF50C /* ImagePickerController.swift */; };
+		045079FF2C58FAAE000CF50C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045079FE2C58FAAE000CF50C /* GoogleService-Info.plist */; };
+		04507A052C5B2A74000CF50C /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04507A042C5B2A74000CF50C /* CGFloat+Extensions.swift */; };
+		04507A072C5B2A8B000CF50C /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04507A062C5B2A8B000CF50C /* Double+Extensions.swift */; };
+		04507A092C5B2A9D000CF50C /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04507A082C5B2A9D000CF50C /* Int+Extensions.swift */; };
 		04A412D02C48B89F00FA5F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */; };
 		04A412D22C48B89F00FA5F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */; };
 		04A412D42C48B89F00FA5F13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412D32C48B89F00FA5F13 /* LoginViewController.swift */; };
@@ -23,8 +27,7 @@
 		04A412F32C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */; };
 		04A413072C48EB9C00FA5F13 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A413062C48EB9C00FA5F13 /* R.generated.swift */; };
 		04AFDA0D2C4DE4AE00E50625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */; };
-		04AFDA142C4DEB7C00E50625 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */; };
-		04AFDA172C4DEB9900E50625 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */; };
+		04AFDA142C4DEB7C00E50625 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA132C4DEB7C00E50625 /* PhotoEditingViewController.swift */; };
 		04AFDA1A2C4DEBB200E50625 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */; };
 		04AFDA1D2C4E2B6E00E50625 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA1C2C4E2B6E00E50625 /* UIImage+Extension.swift */; };
 		04AFDA1F2C4E3E9800E50625 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFDA1E2C4E3E9800E50625 /* UITextField+Extension.swift */; };
@@ -52,12 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045079E62C4F8799000CF50C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		045079E92C50BD4F000CF50C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		045079ED2C50C0BA000CF50C /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		045079EF2C50CD22000CF50C /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
 		045079F22C51F42F000CF50C /* LoginValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationService.swift; sourceTree = "<group>"; };
 		045079F42C521933000CF50C /* LoginAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimations.swift; sourceTree = "<group>"; };
+		045079FC2C58D3B1000CF50C /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		045079FE2C58FAAE000CF50C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04507A042C5B2A74000CF50C /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		04507A062C5B2A8B000CF50C /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		04507A082C5B2A9D000CF50C /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		04A412CC2C48B89F00FA5F13 /* FindJelly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindJelly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A412CF2C48B89F00FA5F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A412D12C48B89F00FA5F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +79,7 @@
 		04A412F22C48B8A100FA5F13 /* FindJellyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJellyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		04A413062C48EB9C00FA5F13 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = FindJelly/Sources/Generated/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		04AFDA0C2C4DE4AE00E50625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		04AFDA132C4DEB7C00E50625 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		04AFDA192C4DEBB200E50625 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04AFDA1C2C4E2B6E00E50625 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		04AFDA1E2C4E3E9800E50625 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		045079EB2C50C099000CF50C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				045079E82C50BD3C000CF50C /* Utilities */,
 				045079F12C51F413000CF50C /* CheckLoginFileds */,
 				045079EC2C50C0A3000CF50C /* AuthenticationManager */,
 			);
@@ -150,6 +157,14 @@
 				045079F22C51F42F000CF50C /* LoginValidationService.swift */,
 			);
 			path = CheckLoginFileds;
+			sourceTree = "<group>";
+		};
+		045079F92C58C21B000CF50C /* ImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				045079FC2C58D3B1000CF50C /* ImagePickerController.swift */,
+			);
+			path = ImagePickerController;
 			sourceTree = "<group>";
 		};
 		04A412C32C48B89F00FA5F13 = {
@@ -177,9 +192,8 @@
 		04A412CE2C48B89F00FA5F13 /* FindJelly */ = {
 			isa = PBXGroup;
 			children = (
-				045079EB2C50C099000CF50C /* Services */,
-				045079E82C50BD3C000CF50C /* Utilities */,
 				04AFDA1B2C4E2B5D00E50625 /* Extensions */,
+				045079EB2C50C099000CF50C /* Services */,
 				04A413022C48BAB800FA5F13 /* Presentation */,
 				04A412FF2C48B8CE00FA5F13 /* Application */,
 				04A413002C48BA9B00FA5F13 /* Resources */,
@@ -219,7 +233,7 @@
 				04A413032C48BAC400FA5F13 /* LaunchScreen */,
 				04A413012C48BAA600FA5F13 /* Sources */,
 				04A412DD2C48B8A100FA5F13 /* Info.plist */,
-				045079E62C4F8799000CF50C /* GoogleService-Info.plist */,
+				045079FE2C58FAAE000CF50C /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -266,20 +280,13 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
-		04AFDA122C4DEB6F00E50625 /* ProfileViewController */ = {
+		04AFDA122C4DEB6F00E50625 /* PhotoEditingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04AFDA132C4DEB7C00E50625 /* ProfileViewController.swift */,
+				045079F92C58C21B000CF50C /* ImagePickerController */,
+				04AFDA132C4DEB7C00E50625 /* PhotoEditingViewController.swift */,
 			);
-			path = ProfileViewController;
-			sourceTree = "<group>";
-		};
-		04AFDA152C4DEB8500E50625 /* ChatListViewController */ = {
-			isa = PBXGroup;
-			children = (
-				04AFDA162C4DEB9900E50625 /* ChatListViewController.swift */,
-			);
-			path = ChatListViewController;
+			path = PhotoEditingViewController;
 			sourceTree = "<group>";
 		};
 		04AFDA182C4DEBA700E50625 /* SettingsViewController */ = {
@@ -296,6 +303,9 @@
 				04AFDA1C2C4E2B6E00E50625 /* UIImage+Extension.swift */,
 				04AFDA1E2C4E3E9800E50625 /* UITextField+Extension.swift */,
 				04AFDA202C4E42AB00E50625 /* UIButton+Extension.swift */,
+				04507A042C5B2A74000CF50C /* CGFloat+Extensions.swift */,
+				04507A062C5B2A8B000CF50C /* Double+Extensions.swift */,
+				04507A082C5B2A9D000CF50C /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,8 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				04AFDA182C4DEBA700E50625 /* SettingsViewController */,
-				04AFDA152C4DEB8500E50625 /* ChatListViewController */,
-				04AFDA122C4DEB6F00E50625 /* ProfileViewController */,
+				04AFDA122C4DEB6F00E50625 /* PhotoEditingViewController */,
 				04AFDA0B2C4DE48E00E50625 /* TabBarController */,
 			);
 			path = App;
@@ -454,8 +463,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A412D92C48B8A100FA5F13 /* Assets.xcassets in Resources */,
+				045079FF2C58FAAE000CF50C /* GoogleService-Info.plist in Resources */,
 				04A412DC2C48B8A100FA5F13 /* Base in Resources */,
-				045079E72C4F8799000CF50C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,19 +632,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AFDA1F2C4E3E9800E50625 /* UITextField+Extension.swift in Sources */,
+				04507A092C5B2A9D000CF50C /* Int+Extensions.swift in Sources */,
 				04A412D42C48B89F00FA5F13 /* LoginViewController.swift in Sources */,
 				045079F02C50CD22000CF50C /* AuthDataResultModel.swift in Sources */,
-				04AFDA172C4DEB9900E50625 /* ChatListViewController.swift in Sources */,
 				04A412D02C48B89F00FA5F13 /* AppDelegate.swift in Sources */,
 				04AFDA212C4E42AB00E50625 /* UIButton+Extension.swift in Sources */,
 				04AFDA0D2C4DE4AE00E50625 /* MainTabBarController.swift in Sources */,
 				045079EA2C50BD4F000CF50C /* Utilities.swift in Sources */,
 				045079EE2C50C0BA000CF50C /* AuthenticationManager.swift in Sources */,
-				04AFDA142C4DEB7C00E50625 /* ProfileViewController.swift in Sources */,
+				04AFDA142C4DEB7C00E50625 /* PhotoEditingViewController.swift in Sources */,
 				04A412D22C48B89F00FA5F13 /* SceneDelegate.swift in Sources */,
 				045079F32C51F42F000CF50C /* LoginValidationService.swift in Sources */,
 				04AFDA1D2C4E2B6E00E50625 /* UIImage+Extension.swift in Sources */,
+				04507A072C5B2A8B000CF50C /* Double+Extensions.swift in Sources */,
+				045079FD2C58D3B1000CF50C /* ImagePickerController.swift in Sources */,
 				04A413072C48EB9C00FA5F13 /* R.generated.swift in Sources */,
+				04507A052C5B2A74000CF50C /* CGFloat+Extensions.swift in Sources */,
 				045079F52C521933000CF50C /* LoginAnimations.swift in Sources */,
 				04AFDA1A2C4DEBB200E50625 /* SettingsViewController.swift in Sources */,
 			);
@@ -816,6 +828,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindJelly/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The App using camera for editing photos ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The App using library for addind and editing an exist photo into your device";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -851,6 +865,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindJelly/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The App using camera for editing photos ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The App using library for addind and editing an exist photo into your device";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

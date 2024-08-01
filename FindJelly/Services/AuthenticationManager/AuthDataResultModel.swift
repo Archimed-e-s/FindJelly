@@ -1,6 +1,10 @@
 import Foundation
 import Firebase
 
+enum ResponseCode {
+    case success, error, noVerify
+}
+
 struct AuthDataResultModel {
     let uid: String
     let email: String?
@@ -20,8 +24,4 @@ struct GoogleSignInResultModel {
 struct LoginFields {
     var email: String
     var password: String
-}
-
-struct ResponseCode {
-    var code: Int
 }

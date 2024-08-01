@@ -18,4 +18,13 @@ extension UIButton {
         self.backgroundColor = R.color.primaryColor()
         self.setTitleColor(.white, for: .normal)
     }
+
+    func setPrimaryButtonWithIcon (_ icon: String, _ cornerRadius: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = cornerRadius
+        self.setImage(UIImage(systemName: icon), for: .normal)
+        self.tintColor = .white
+        self.backgroundColor = R.color.primaryColor()
+    }
 }
